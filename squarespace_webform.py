@@ -17,7 +17,7 @@ from pytz import timezone
 from datetime import timedelta as td
 
 #API Key
-apikey = '9dfe59fe-6c5e-4c7e-b1f5-638e63531e90'
+apikey = ''
 
 #variables to specify dates in GUI
 today = datetime.datetime.now() 
