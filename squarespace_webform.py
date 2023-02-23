@@ -36,7 +36,7 @@ layout = [[sg.Text('\n Please enter the pickup date. Note that orders with no da
                  [sg.Text('\n')],
                  [sg.Submit(), sg.Cancel()]]      
 
-window = sg.Window('Provisions Orders Query', layout)    
+window = sg.Window('Orders Query', layout)    
 
 #Loop to verify fidelity of user input
 while True:   
@@ -65,7 +65,7 @@ while True:
     #If the user hasn't entered valid dates, let them know:
     except:
         #print('not valid dates')
-        sg.popup('Please enter a valid format, Nicole')
+        sg.popup('Please enter a valid format')
 
 
 #values = ['2020-04-07', '2020-04-04']
@@ -206,7 +206,7 @@ if var_exit != 1:
     #If there are no orders for the date specified, let the user know and halt execution of the script
     if all([df.empty for df in pickups]):
         var_exit = 7
-        print('no orders dummy')
+        print('no orders')
         sg.popup('No pending orders for this date')
         
     if var_exit != 7:
